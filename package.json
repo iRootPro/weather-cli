@@ -2,7 +2,11 @@
   "name": "weather-cli",
   "version": "1.0.0",
   "description": "CLI Weather client",
-  "main": "index.js",
+  "main": "weather.js",
+  "type": "module",
+  "bin": {
+    "weather": "weather.js"
+  },
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,5 +16,13 @@
     "weather"
   ],
   "author": "Alexander Neupokoev",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "chalk": "^5.0.0",
+    "yargs": "^17.2.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.0"
+  }
 }
