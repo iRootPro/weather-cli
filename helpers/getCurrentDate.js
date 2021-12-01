@@ -1,4 +1,8 @@
+import { padStartZero } from './padStartZero.js';
+
 export const getCurrentDate = () => {
   const date = new Date();
-  return `${date.getDate()}.${date.getMonth()+1}.${date.getFullYear()}`;
+  return `${padStartZero(date.getDate())}.${padStartZero(
+    date.getMonth() + 1,
+  )}.${padStartZero(date.getFullYear())}`;
 };

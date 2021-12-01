@@ -4,7 +4,6 @@ import { printError, printSuccess } from './services/log.service.js';
 import { saveKeyValue } from './services/storage.service.js';
 import { getCurrentWeather } from './services/api.service.js';
 import { outputCurrentWeather } from './services/output.service.js';
-import { exec } from 'child_process';
 
 const saveToken = async (token) => {
   if (!token.length) {
