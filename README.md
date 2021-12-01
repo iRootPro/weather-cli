@@ -56,7 +56,7 @@ node weather.js
 
 ![Погода в данный момент](/images/output_current.png)
 
-Вывод погода на 12 часов:
+Вывод погоды на 12 часов:
 
 ```shell
 node weather hourly
