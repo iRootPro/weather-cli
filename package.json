@@ -1,5 +1,5 @@
 {
-  "name": "weather-cli",
+  "name": "simple-weather-cli",
   "version": "1.0.0",
   "description": "CLI Weather client",
   "main": "weather.js",
@@ -15,6 +15,10 @@
     "cli",
     "weather"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iRootPro/weather-cli"
+  },
   "author": "Alexander Neupokoev",
   "license": "ISC",
   "dependencies": {

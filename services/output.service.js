@@ -8,10 +8,16 @@ export const outputCurrentWeather = (weather) => {
     weather.name
   }
       ${chalk.bgWhite.black(
-        ' ' + weather.weather[0].description.toUpperCase() +' ')} Температура: ${weather.main.temp}°C, ощущается как: ${
+        ' ' + weather.weather[0].description.toUpperCase() + ' ',
+      )} 
+      Температура: ${weather.main.temp}°C, ощущается как: ${
     weather.main.feels_like
   }°C. 
-      Влажность: ${weather.main.humidity}%. Давление: ${weather.main.grnd_level}мм.рт.ст.
+      Влажность: ${weather.main.humidity}% 
+      Давление: ${Math.floor(
+    weather.main.pressure * 0.75,
+  )} мм.рт.ст.
+      Ветер: ${weather.wind.speed} м/с
       🌅 Восход: ${convertTimeStamp(
         weather.sys.sunrise,
       )} 🌇 Заход: ${convertTimeStamp(weather.sys.sunset)}
