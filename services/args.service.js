@@ -3,6 +3,9 @@ import { hideBin } from 'yargs/helpers';
 
 export const args = yargs(hideBin(process.argv))
   .usage('Утилита для получения информации о текущей погоде в указанном городе')
+  .command('current', 'Получение текущей погоды')
+  .command('hourly', 'Получение команды на несколько часов')
+  .command('daily', 'Получение прогноза погоды на несколько дней')
   .help('help')
   .alias('h', 'help')
   .options({

@@ -25,12 +25,36 @@ export const getCurrentWeather = async () => {
   });
 };
 
-// export const getForecastWeather = async (city) => {
-//   const token = await getKeyValue(PARAMS_DICTIONARY.token);
-//   return instance.get('forecast/hourly', {
-//     params: {
-//       q: city,
-//       appid: token,
-//     },
-//   });
-// };
+export const getCoordCity = async (city) => {
+  const config = await getKeysValues();
+  return await instance.get('weather', {
+    params: {
+      q: city,
+      appid: config.token,
+    },
+  });
+};
+
+export const getDailyWeather = async () => {
+  const config = await getKeysValues();
+  return await instance.get('onecall', {
+    params: {
+      lat: config.lat,
+      lon: config.lon,
+      appid: config.token,
+      exclude: 'current,minutely,hourly',
+    },
+  });
+};
+
+export const getHourlyWeather = async () => {
+  const config = await getKeysValues();
+  return await instance.get('onecall', {
+    params: {
+      lat: config.lat,
+      lon: config.lon,
+      appid: config.token,
+      exclude: 'current,minutely,daily,alerts',
+    },
+  });
+};
